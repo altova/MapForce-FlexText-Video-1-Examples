@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2020sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="FlexText_Orders" library="text" uid="2" kind="16">
+					<view rbx="351" rby="424"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Root" expanded="1">
+										<entry name="Split once" expanded="1">
+											<entry name="Store - Date" outkey="1"/>
+											<entry name="Split once" expanded="1">
+												<entry name="Repeated split - Orders" outkey="2" expanded="1">
+													<entry name="Split once" expanded="1">
+														<entry name="CSV - Header" expanded="1">
+															<entry name="OrderID" outkey="3"/>
+															<entry name="CustID" outkey="4"/>
+															<entry name="CustName" outkey="5"/>
+															<entry name="CustEMail" outkey="6"/>
+															<entry name="CustAddress" outkey="7"/>
+														</entry>
+														<entry name="CSV - Details" outkey="8" expanded="1">
+															<entry name="ItemID" outkey="9"/>
+															<entry name="ItemDesc" outkey="10"/>
+															<entry name="Price" outkey="11"/>
+															<entry name="Quantity" outkey="12"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="txt" encoding="52" byteorder="1" byteordermark="0" config="..\FlexText\FlexText_Orders.mft"/>
+					</data>
+				</component>
+				<component name="Orders" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="547" rbx="783" rby="424"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Orders" expanded="1">
+										<entry name="Date" inpkey="13"/>
+										<entry name="Order" inpkey="14" expanded="1">
+											<entry name="Order_ID" inpkey="15"/>
+											<entry name="Cust_ID" inpkey="16"/>
+											<entry name="Cust_Name" inpkey="17"/>
+											<entry name="Cust_Email" inpkey="18"/>
+											<entry name="Shipping_Address" inpkey="19"/>
+											<entry name="Items" expanded="1">
+												<entry name="Item" inpkey="20" expanded="1">
+													<entry name="Item_ID" inpkey="21"/>
+													<entry name="Desc" inpkey="22"/>
+													<entry name="Price" inpkey="23"/>
+													<entry name="Quantity" inpkey="24"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\XSD\Orders.xsd" outputinstance="..\XSD\Orders.xml" instanceroot="{}Orders"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="24"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

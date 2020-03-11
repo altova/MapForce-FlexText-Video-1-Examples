@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexText>
+	<Commands>
+		<Project FileName="C:\Flextext_video_1_example_files\TXT\Orders.txt" ByteOrderMark="0">
+			<Version/>
+			<RootName Value="Root"/>
+			<Connections>
+				<Connection>
+					<SplitSingle>
+						<Version/>
+						<Upper Offset="1"/>
+						<Lower/>
+						<Name Value="Split%20once"/>
+						<Connections>
+							<Connection>
+								<Store Type="date" TrimSide="Right" TrimCharSet="%0D%0A">
+									<Version/>
+									<Name Value="Store%20-%20Date"/>
+									<Connections>
+										<Connection/>
+									</Connections>
+									<XData>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+										<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+									</XData>
+								</Store>
+							</Connection>
+							<Connection>
+								<SplitSingle>
+									<Version/>
+									<Upper Base="Tail" Offset="1"/>
+									<Lower/>
+									<Name Value="Split%20once"/>
+									<Connections>
+										<Connection>
+											<SplitMultiple Mode="DynLS" Behavior="LineStartsWith">
+												<Version/>
+												<Separator Value="H"/>
+												<RegexPattern Value=","/>
+												<SeparatorForWriting/>
+												<Name Value="Repeated%20split%20-%20Orders"/>
+												<Connections>
+													<Connection>
+														<SplitSingle>
+															<Version/>
+															<Upper Offset="1"/>
+															<Lower/>
+															<Name Value="Split%20once"/>
+															<Connections>
+																<Connection>
+																	<CSV QuoteCharacter='"'>
+																		<Version/>
+																		<RecordSeparator Value="%0D%0A"/>
+																		<FieldSeparator Value=","/>
+																		<RecordName Value="CSV%20-%20Header"/>
+																		<Fields>
+																			<Field Type="string">
+																				<Name Value="RecordType"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="OrderID"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="CustID"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="CustName"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="CustEMail"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="CustAddress"/>
+																				<Version/>
+																			</Field>
+																		</Fields>
+																		<Connections>
+																			<Connection/>
+																		</Connections>
+																		<XData>
+																			<FieldWidths Item="50" Item1="50" Item2="50" Item3="50" Item4="50" Item5="50"/>
+																			<OpenState Property="1" Preview="1" Connector="1"/>
+																			<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+																		</XData>
+																	</CSV>
+																</Connection>
+																<Connection>
+																	<CSV QuoteCharacter='"'>
+																		<Version/>
+																		<RecordSeparator Value="%0D%0A"/>
+																		<FieldSeparator Value=","/>
+																		<RecordName Value="CSV%20-%20Details"/>
+																		<Fields>
+																			<Field Type="string">
+																				<Name Value="RecordType"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="ItemID"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="string">
+																				<Name Value="ItemDesc"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="decimal">
+																				<Name Value="Price"/>
+																				<Version/>
+																			</Field>
+																			<Field Type="integer">
+																				<Name Value="Quantity"/>
+																				<Version/>
+																			</Field>
+																		</Fields>
+																		<Connections>
+																			<Connection/>
+																		</Connections>
+																		<XData>
+																			<FieldWidths Item="50" Item1="50" Item2="50" Item3="50" Item4="50"/>
+																			<OpenState Property="1" Preview="1" Connector="1"/>
+																			<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+																		</XData>
+																	</CSV>
+																</Connection>
+															</Connections>
+															<XData>
+																<OpenState Property="1" Preview="1" Connector="1"/>
+																<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+															</XData>
+														</SplitSingle>
+													</Connection>
+												</Connections>
+												<XData>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+													<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+												</XData>
+											</SplitMultiple>
+										</Connection>
+										<Connection>
+											<Ignore>
+												<Connections>
+													<Connection/>
+												</Connections>
+												<XData>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+													<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+												</XData>
+											</Ignore>
+										</Connection>
+									</Connections>
+									<XData>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+										<Dimension FullWidth="867" FullHeight="231" TextHeight="204"/>
+									</XData>
+								</SplitSingle>
+							</Connection>
+						</Connections>
+						<XData>
+							<OpenState Property="1" Preview="1" Connector="1"/>
+							<Dimension FullWidth="867" FullHeight="247" TextHeight="204"/>
+						</XData>
+					</SplitSingle>
+				</Connection>
+			</Connections>
+			<XData>
+				<OpenState Property="1" Preview="1" Connector="1"/>
+				<Dimension/>
+			</XData>
+		</Project>
+		<Functions/>
+	</Commands>
+</FlexText>

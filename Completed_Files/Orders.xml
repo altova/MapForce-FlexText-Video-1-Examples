@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Orders>
+	<Date>2019-08-23</Date>
+	<Order>
+		<Order_ID>12345</Order_ID>
+		<Cust_ID>00006</Cust_ID>
+		<Cust_Name>John Smith</Cust_Name>
+		<Cust_Email>j_smith@rand_email.com</Cust_Email>
+		<Shipping_Address>Lowell Avenue 45 RockCity, MI 91337 </Shipping_Address>
+		<Items>
+			<Item>
+				<Item_ID>00467721</Item_ID>
+				<Desc>Hammer</Desc>
+				<Price>7.99</Price>
+				<Quantity>1</Quantity>
+			</Item>
+			<Item>
+				<Item_ID>00836643</Item_ID>
+				<Desc>men's socks</Desc>
+				<Price>3.49</Price>
+				<Quantity>4</Quantity>
+			</Item>
+			<Item>
+				<Item_ID>00458955</Item_ID>
+				<Desc>toaster</Desc>
+				<Price>13.99</Price>
+				<Quantity>1</Quantity>
+			</Item>
+		</Items>
+	</Order>
+	<Order>
+		<Order_ID>12346</Order_ID>
+		<Cust_ID>00025</Cust_ID>
+		<Cust_Name>Mary Hooper</Cust_Name>
+		<Cust_Email>mary_h@rand_email.com</Cust_Email>
+		<Shipping_Address>Highstreet 25 Ravensburg, CT 92246</Shipping_Address>
+		<Items>
+			<Item>
+				<Item_ID>00286093</Item_ID>
+				<Desc>wool cardigan</Desc>
+				<Price>22</Price>
+				<Quantity>1</Quantity>
+			</Item>
+			<Item>
+				<Item_ID>00836643</Item_ID>
+				<Desc>men's socks</Desc>
+				<Price>3.49</Price>
+				<Quantity>2</Quantity>
+			</Item>
+		</Items>
+	</Order>
+	<Order>
+		<Order_ID>12347</Order_ID>
+		<Cust_ID>00106</Cust_ID>
+		<Cust_Name>Gary Newman</Cust_Name>
+		<Cust_Email>gary_new@rand_email.com</Cust_Email>
+		<Shipping_Address>Mainstreet 36 Newsty, MA 98773</Shipping_Address>
+		<Items>
+			<Item>
+				<Item_ID>00618732</Item_ID>
+				<Desc>256Gb SD card</Desc>
+				<Price>39.99</Price>
+				<Quantity>1</Quantity>
+			</Item>
+		</Items>
+	</Order>
+</Orders>
